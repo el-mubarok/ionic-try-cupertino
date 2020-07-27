@@ -13,13 +13,16 @@ export class HomePage {
 
   ngAfterViewInit(){
     let a = document.getElementsByClassName('cupertino-pane')
+    let setting = {
+      darkMode: true
+    }
     console.log(a);
-    this.myPane = new CupertinoPane('.cupertino-pane');
-    this.myPane.present();
+    this.myPane = new CupertinoPane('.cupertino-pane', setting);
+    this.myPane.present({animate: true});
   }
 
   openNow(){
-    this.myPane.present();
+    this.myPane.present({animate: true});
   }
 
 }
